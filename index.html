@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Tracker — Smart Expense Tracking for Better Financial Management</title>
+  <meta name="description" content="Take control of your finances with Money Tracker. Track expenses, split bills, manage family budgets, and gain smart insights — all for just €4.99." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">💰</span>
+        <span class="logo-text">Money<strong>Tracker</strong></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#pricing" class="nav-cta">Get App — €4.99</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing" class="mobile-cta">Get App — €4.99</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content" data-animate="fade-up">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Smart Finance Management
+        </div>
+        <h1 class="hero-title">
+          Stop wondering<br />
+          <span class="gradient-text">where your money goes.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Money Tracker gives you crystal-clear visibility into your spending,
+          lets you split bills with friends and family, and delivers AI-powered
+          insights that actually help you save — all in one beautiful app.
+        </p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary btn-lg">
+            <span>Get Money Tracker</span>
+            <span class="btn-price-badge">€4.99</span>
+          </a>
+          <a href="#features" class="btn btn-ghost btn-lg">
+            See All Features ↓
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>13+</strong>
+            <span>Currencies</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>3</strong>
+            <span>Languages</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>100%</strong>
+            <span>Private & Secure</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" data-animate="fade-left">
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-ui-preview">
+                <div class="app-header-preview">
+                  <span>📊 Dashboard</span>
+                  <span>March 2026</span>
+                </div>
+                <div class="app-cards-preview">
+                  <div class="mini-card spent">
+                    <span class="mini-card-label">Spent</span>
+                    <span class="mini-card-value">€842</span>
+                  </div>
+                  <div class="mini-card income">
+                    <span class="mini-card-label">Income</span>
+                    <span class="mini-card-value">€2,400</span>
+                  </div>
+                  <div class="mini-card balance">
+                    <span class="mini-card-label">Balance</span>
+                    <span class="mini-card-value">€1,558</span>
+                  </div>
+                </div>
+                <div class="app-chart-preview">
+                  <div class="chart-donut">
+                    <!-- App category colors: Food=orange #FF9500, Transport=blue #5AC8FA, Other=gray -->
+                    <svg viewBox="0 0 80 80" class="donut-svg">
+                      <circle class="donut-bg" cx="40" cy="40" r="30" fill="none" stroke="#e6eefc" stroke-width="12"/>
+                      <circle class="donut-seg seg-1" cx="40" cy="40" r="30" fill="none" stroke="#6366f1" stroke-width="12" stroke-dasharray="60 129" stroke-dashoffset="0"/>
+                      <circle class="donut-seg seg-2" cx="40" cy="40" r="30" fill="none" stroke="#06b6d4" stroke-width="12" stroke-dasharray="40 129" stroke-dashoffset="-60"/>
+                      <circle class="donut-seg seg-3" cx="40" cy="40" r="30" fill="none" stroke="#10b981" stroke-width="12" stroke-dasharray="29 129" stroke-dashoffset="-100"/>
+                    </svg>
+                  </div>
+                  <div class="chart-legend">
+                    <div class="legend-item"><span class="legend-dot" style="background:#6366f1"></span>Food 42%</div>
+                    <div class="legend-item"><span class="legend-dot" style="background:#06b6d4"></span>Transport 28%</div>
+                    <div class="legend-item"><span class="legend-dot" style="background:#10b981"></span>Other 30%</div>
+                  </div>
+                </div>
+                <div class="app-progress-preview">
+                  <div class="progress-label">
+                    <span>Budget used</span>
+                    <span>35%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width:35%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-glow"></div>
+        </div>
+        <div class="floating-card card-insight" data-animate="float">
+          <div class="float-icon">💡</div>
+          <div>
+            <strong>Smart Insight</strong>
+            <p>Food spending down 12% this month</p>
+          </div>
+        </div>
+        <div class="floating-card card-split" data-animate="float-delay">
+          <div class="float-icon">🤝</div>
+          <div>
+            <strong>Bill Split</strong>
+            <p>Dinner: €12.50 each</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40 C360 80 1080 0 1440 40 L1440 80 L0 80 Z" fill="var(--bg-secondary)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== PAIN POINTS ===== -->
+  <section class="pain-section">
+    <div class="container">
+      <div class="pain-intro" data-animate="fade-up">
+        <h2>Does this sound familiar?</h2>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card" data-animate="fade-up" data-delay="0">
+          <span class="pain-emoji">😰</span>
+          <p>"I have no idea where my paycheck disappears every month."</p>
+        </div>
+        <div class="pain-card" data-animate="fade-up" data-delay="100">
+          <span class="pain-emoji">🤦</span>
+          <p>"Splitting expenses with roommates is always a mess and causes arguments."</p>
+        </div>
+        <div class="pain-card" data-animate="fade-up" data-delay="200">
+          <span class="pain-emoji">📊</span>
+          <p>"I tried spreadsheets but they're too complicated to keep up with daily."</p>
+        </div>
+        <div class="pain-card" data-animate="fade-up" data-delay="300">
+          <span class="pain-emoji">👨‍👩‍👧</span>
+          <p>"Managing a shared family budget is chaotic — nobody knows what's been spent."</p>
+        </div>
+      </div>
+      <div class="pain-solution" data-animate="fade-up">
+        <p>Money Tracker solves all of this — and more — for less than a cup of coffee.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES OVERVIEW ===== -->
+  <section class="features-overview" id="features">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">Everything You Need</span>
+        <h2>Packed with features.<br />Simple to use.</h2>
+        <p>Every feature is designed to take the stress out of money management and put you back in control.</p>
+      </div>
+
+      <!-- Feature 1: Dashboard & Analytics -->
+      <div class="feature-block feature-block-reverse" data-animate="fade-up">
+        <div class="feature-visual">
+          <!-- SCREENSHOT PLACEHOLDER -->
+          <div class="screenshot-placeholder">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">📱</span>
+              <span class="placeholder-text">Dashboard Screenshot</span>
+              <span class="placeholder-sub">Coming soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="feature-content">
+          <div class="feature-label-tag">Dashboard & Analytics</div>
+          <h3>Your finances at a glance — every single day</h3>
+          <p>
+            Open the app and instantly see your monthly spending, income, and remaining balance.
+            The interactive pie chart breaks down exactly where every euro goes, category by category.
+          </p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Monthly overview: total spent, income & balance</li>
+            <li><span class="check">✓</span> Visual category breakdown with pie charts</li>
+            <li><span class="check">✓</span> Budget progress bar with color-coded alerts</li>
+            <li><span class="check">✓</span> Quick expense entry right from the dashboard</li>
+            <li><span class="check">✓</span> Month-over-month trend comparisons</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 2: Expense Tracking -->
+      <div class="feature-block" data-animate="fade-up">
+        <div class="feature-content">
+          <div class="feature-label-tag">Expense Tracking</div>
+          <h3>Log expenses in seconds, not minutes</h3>
+          <p>
+            Add any expense with a description, amount, category, date, and custom tags.
+            Search, filter, and export your entire history whenever you need it —
+            full control over your data.
+          </p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Categories: Food, Transport, Rent, Entertainment & more</li>
+            <li><span class="check">✓</span> Custom tags for detailed organization</li>
+            <li><span class="check">✓</span> Powerful search and date-range filtering</li>
+            <li><span class="check">✓</span> CSV import & export for full data portability</li>
+            <li><span class="check">✓</span> 13+ currencies supported (EUR, USD, RSD, GBP, JPY...)</li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <!-- SCREENSHOT PLACEHOLDER -->
+          <div class="screenshot-placeholder">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">📱</span>
+              <span class="placeholder-text">Expenses Screen Screenshot</span>
+              <span class="placeholder-sub">Coming soon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3: Smart Insights -->
+      <div class="feature-block feature-block-reverse" data-animate="fade-up">
+        <div class="feature-visual">
+          <!-- SCREENSHOT PLACEHOLDER -->
+          <div class="screenshot-placeholder">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">📱</span>
+              <span class="placeholder-text">Smart Insights Screenshot</span>
+              <span class="placeholder-sub">Coming soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="feature-content">
+          <div class="feature-label-tag">AI-Powered Insights</div>
+          <h3>Your personal finance advisor, built in</h3>
+          <p>
+            Money Tracker analyzes your spending patterns and surfaces intelligent
+            insights automatically — no setup required. Discover spending trends you
+            never noticed and make smarter decisions.
+          </p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> AI-generated spending insights and suggestions</li>
+            <li><span class="check">✓</span> Top category detection and alerts</li>
+            <li><span class="check">✓</span> Automatic budget recommendations</li>
+            <li><span class="check">✓</span> Spending reports with full transaction history</li>
+            <li><span class="check">✓</span> KPI summaries with key financial metrics</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 4: Split Expenses -->
+      <div class="feature-block" data-animate="fade-up">
+        <div class="feature-content">
+          <div class="feature-label-tag">Split Expenses ⭐ Fan Favorite</div>
+          <h3>Split bills with zero drama</h3>
+          <p>
+            The most powerful bill-splitting feature you'll find anywhere. Divide any expense
+            equally or customize each person's share individually. See the exact breakdown
+            in real time — no more awkward calculations at the dinner table.
+          </p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Equal split: auto-divides between everyone</li>
+            <li><span class="check">✓</span> Custom split: set exact amounts per person</li>
+            <li><span class="check">✓</span> Mixed mode: start equal, then adjust individual amounts</li>
+            <li><span class="check">✓</span> Real-time total calculation as you type</li>
+            <li><span class="check">✓</span> Recurring splits for monthly shared bills</li>
+            <li><span class="check">✓</span> Full split history stored in your account</li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <!-- SCREENSHOT PLACEHOLDER -->
+          <div class="screenshot-placeholder">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">📱</span>
+              <span class="placeholder-text">Split Expenses Screenshot</span>
+              <span class="placeholder-sub">Coming soon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 5: Family Budget -->
+      <div class="feature-block feature-block-reverse" data-animate="fade-up">
+        <div class="feature-visual">
+          <!-- SCREENSHOT PLACEHOLDER -->
+          <div class="screenshot-placeholder">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">📱</span>
+              <span class="placeholder-text">Family Budget Screenshot</span>
+              <span class="placeholder-sub">Coming soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="feature-content">
+          <div class="feature-label-tag">Family & Shared Budgets</div>
+          <h3>Manage money together, stay on the same page</h3>
+          <p>
+            Create shared wallets for the whole family or any group. Invite members by email,
+            assign roles, set spending caps and goals — everyone always knows the current state
+            of the shared budget.
+          </p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Create multiple shared wallets with custom goals</li>
+            <li><span class="check">✓</span> Invite family via email with one click</li>
+            <li><span class="check">✓</span> Role-based access: Owner, Member, Viewer</li>
+            <li><span class="check">✓</span> Set spending caps and goal deadlines</li>
+            <li><span class="check">✓</span> Per-wallet transaction history</li>
+            <li><span class="check">✓</span> Friends list with individual spending limits</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SCREENSHOTS ===== -->
+  <section class="screenshots-section" id="screenshots">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">App Screens</span>
+        <h2>Beautiful. Intuitive. Yours.</h2>
+        <p>Every screen is designed for clarity and speed — so managing money never feels like a chore.</p>
+      </div>
+      <div class="screenshots-grid" data-animate="fade-up">
+        <div class="screenshot-item">
+          <div class="screenshot-placeholder tall">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">📊</span>
+              <span class="placeholder-text">Dashboard View</span>
+              <span class="placeholder-sub">Screenshot coming soon</span>
+            </div>
+          </div>
+          <p class="screenshot-caption">Dashboard Overview</p>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-placeholder tall">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">💸</span>
+              <span class="placeholder-text">Expenses List</span>
+              <span class="placeholder-sub">Screenshot coming soon</span>
+            </div>
+          </div>
+          <p class="screenshot-caption">Expense Management</p>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-placeholder tall">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">🤝</span>
+              <span class="placeholder-text">Bill Splitter</span>
+              <span class="placeholder-sub">Screenshot coming soon</span>
+            </div>
+          </div>
+          <p class="screenshot-caption">Bill Splitting</p>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-placeholder tall">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">👨‍👩‍👧</span>
+              <span class="placeholder-text">Family Budget</span>
+              <span class="placeholder-sub">Screenshot coming soon</span>
+            </div>
+          </div>
+          <p class="screenshot-caption">Family Budgets</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MORE FEATURES GRID ===== -->
+  <section class="more-features">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">More Features</span>
+        <h2>Everything you'd expect — and more.</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" data-animate="fade-up" data-delay="0">
+          <div class="feature-card-icon">🌙</div>
+          <h4>Dark Mode</h4>
+          <p>Full dark theme support for comfortable use day and night. Your preference is saved automatically.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="50">
+          <div class="feature-card-icon">🌍</div>
+          <h4>Multi-Language</h4>
+          <p>Available in English, Serbian, and Spanish — with more languages on the way.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="100">
+          <div class="feature-card-icon">💱</div>
+          <h4>13+ Currencies</h4>
+          <p>EUR, USD, RSD, GBP, JPY, AUD, CAD, CHF, SEK, NOK, BRL, INR, CNY — all formatted correctly.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="150">
+          <div class="feature-card-icon">📴</div>
+          <h4>Works Offline</h4>
+          <p>Progressive Web App technology means you can log expenses even without an internet connection.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="200">
+          <div class="feature-card-icon">🔒</div>
+          <h4>Secure & Private</h4>
+          <p>JWT authentication, bcrypt password hashing, and rate-limited APIs keep your data safe.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="250">
+          <div class="feature-card-icon">📲</div>
+          <h4>Mobile & Desktop</h4>
+          <p>Fully responsive design works perfectly on phone, tablet, or desktop. One app, every device.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="300">
+          <div class="feature-card-icon">📤</div>
+          <h4>CSV Export/Import</h4>
+          <p>Export all your expenses to CSV for use in Excel or Google Sheets. Import data from other apps.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="350">
+          <div class="feature-card-icon">🎯</div>
+          <h4>Goal-Based Budgets</h4>
+          <p>Set financial goals with target amounts and deadlines. Track progress visually every day.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="400">
+          <div class="feature-card-icon">🔔</div>
+          <h4>Smart Notifications</h4>
+          <p>Get notified when you're approaching your budget limit. Stay on track without constant checking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">Get Started</span>
+        <h2>Up and running in 3 minutes.</h2>
+        <p>No complicated setup. No tutorials needed. Just open and start tracking.</p>
+      </div>
+      <div class="steps-container">
+        <div class="step" data-animate="fade-up" data-delay="0">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h4>Create your account</h4>
+            <p>Sign up with email, choose your language and currency, set your monthly income — and you're in.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" data-animate="fade-up" data-delay="150">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h4>Start logging expenses</h4>
+            <p>Tap "Add Expense" and fill in amount, category, and a note. Done in under 10 seconds per entry.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" data-animate="fade-up" data-delay="300">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h4>Gain control of your finances</h4>
+            <p>Watch the dashboard fill up with insights. See where your money goes and make better decisions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">Pricing</span>
+        <h2>One price. Everything included.</h2>
+        <p>No subscriptions. No hidden fees. No upsells. Pay once and own it forever.</p>
+      </div>
+      <div class="pricing-card-wrapper" data-animate="fade-up">
+        <div class="pricing-card">
+          <div class="pricing-badge">Best Value</div>
+          <div class="pricing-header">
+            <h3>Money Tracker</h3>
+            <p>Complete app with all features</p>
+            <div class="pricing-price">
+              <span class="price-currency">€</span>
+              <span class="price-amount">4.99</span>
+              <span class="price-period">one-time</span>
+            </div>
+            <p class="pricing-compare">That's less than a coffee ☕ — but it saves you hundreds per year.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-green">✓</span> Dashboard with visual analytics</li>
+            <li><span class="check-green">✓</span> Unlimited expense tracking</li>
+            <li><span class="check-green">✓</span> AI-powered spending insights</li>
+            <li><span class="check-green">✓</span> Bill splitting (equal & custom)</li>
+            <li><span class="check-green">✓</span> Shared family wallets</li>
+            <li><span class="check-green">✓</span> Friend invite system</li>
+            <li><span class="check-green">✓</span> 13+ currencies support</li>
+            <li><span class="check-green">✓</span> Multi-language (EN / SR / ES)</li>
+            <li><span class="check-green">✓</span> CSV export & import</li>
+            <li><span class="check-green">✓</span> Dark mode</li>
+            <li><span class="check-green">✓</span> Offline support (PWA)</li>
+            <li><span class="check-green">✓</span> Secure JWT authentication</li>
+            <li><span class="check-green">✓</span> Works on all devices</li>
+            <li><span class="check-green">✓</span> Free updates forever</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-xl btn-full">
+            Get Money Tracker — €4.99
+          </a>
+          <p class="pricing-guarantee">🔒 Secure payment &nbsp;·&nbsp; Instant access &nbsp;·&nbsp; Yours forever</p>
+        </div>
+        <div class="pricing-side">
+          <div class="side-card" data-animate="fade-up" data-delay="100">
+            <div class="side-icon">💡</div>
+            <h4>Why pay once and own it?</h4>
+            <p>
+              Most finance apps charge €5–€10 <em>per month</em>. That's €60–€120 per year —
+              just to track your own money. Money Tracker charges you <strong>once</strong>
+              and gives you everything. Simple.
+            </p>
+          </div>
+          <div class="side-card" data-animate="fade-up" data-delay="200">
+            <div class="side-icon">🔒</div>
+            <h4>Your data stays yours</h4>
+            <p>
+              No cloud subscription required. Your expense data belongs to you —
+              export it anytime in CSV format and take it anywhere.
+            </p>
+          </div>
+          <div class="side-card" data-animate="fade-up" data-delay="300">
+            <div class="side-icon">📦</div>
+            <h4>Free updates included</h4>
+            <p>
+              Every improvement, new feature, and bug fix is automatically included
+              in your purchase — no re-buying, no upgrade fees.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">What Users Say</span>
+        <h2>Real people. Real results.</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-animate="fade-up" data-delay="0">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Finally an expense app that doesn't require a PhD to use. I set it up in 5 minutes and now I actually know where my money goes."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <strong>Ana M.</strong>
+              <span>Freelancer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate="fade-up" data-delay="100">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"The bill splitting feature alone is worth every cent. No more awkward group chats trying to figure out who owes what after dinner."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div>
+              <strong>Marko T.</strong>
+              <span>Software Engineer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate="fade-up" data-delay="200">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"My wife and I use shared wallets for household expenses. We've saved over €200 in the first month just by seeing clearly what we were wasting money on."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div>
+              <strong>Jovan K.</strong>
+              <span>Parent of 2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">FAQ</span>
+        <h2>Questions? We've got answers.</h2>
+      </div>
+      <div class="faq-list" data-animate="fade-up">
+        <div class="faq-item">
+          <button class="faq-question">
+            What exactly do I get for €4.99?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>You get the full Money Tracker app with every feature included — dashboard analytics, expense tracking, AI insights, bill splitting, shared family wallets, 13+ currencies, multi-language support, CSV import/export, dark mode, and offline support. No subscriptions, no feature tiers, no upsells. One payment, full access, forever.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is there a monthly subscription fee?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. You pay once — €4.99 — and that's it. All future updates are included. We believe your financial data tool shouldn't drain your finances.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Which devices does it work on?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Money Tracker works on all devices: desktop (Windows, Mac, Linux), mobile (Android & iOS), and tablet — through any modern browser. It's a Progressive Web App, so you can install it to your home screen for a native app experience. It also works offline.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is my financial data secure and private?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Money Tracker uses industry-standard JWT authentication, bcrypt password hashing, and rate-limited APIs to protect your account. Your data is yours — you can export everything to CSV at any time, and you can permanently delete your account and all associated data with one click.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I use it with my family or roommates?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! The Family & Shared Budget feature lets you invite others by email, create shared wallets with goals and spending caps, split bills precisely, and manage a friends list with individual spending limits. Everyone stays on the same page.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What currencies are supported?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Money Tracker supports 13+ currencies: EUR (Euro), USD (US Dollar), RSD (Serbian Dinar), GBP (British Pound), JPY (Japanese Yen), AUD (Australian Dollar), CAD (Canadian Dollar), CHF (Swiss Franc), SEK (Swedish Krona), NOK (Norwegian Krone), BRL (Brazilian Real), INR (Indian Rupee), and CNY (Chinese Yuan).</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Which languages is the app available in?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Money Tracker is currently available in English, Serbian (Srpski), and Spanish (Español). You can choose your language during onboarding and change it at any time in Settings.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I import my existing expense data?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Money Tracker supports CSV import, so you can bring in expense data from other apps or spreadsheets. You can also export all your data to CSV at any time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box" data-animate="fade-up">
+        <div class="cta-glow"></div>
+        <div class="cta-content">
+          <h2>Ready to finally take control of your money?</h2>
+          <p>
+            Join hundreds of people who already know exactly where their money goes —
+            and keep more of it as a result. One payment of €4.99 and you're set for life.
+          </p>
+          <div class="cta-actions">
+            <a href="#" class="btn btn-white btn-xl">
+              Get Money Tracker — €4.99
+            </a>
+            <span class="cta-note">⚡ Instant access &nbsp;·&nbsp; All devices &nbsp;·&nbsp; Free updates forever</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-icon">💰</span>
+            <span class="logo-text">Money<strong>Tracker</strong></span>
+          </a>
+          <p>Smart expense tracking for better financial management. Know where your money goes. Keep more of it.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Product</h5>
+            <a href="#features">Features</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h5>Support</h5>
+            <a href="#faq">FAQ</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Money Tracker. All rights reserved.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">🔒 Secure Payment</span>
+          <span class="footer-badge">📱 All Devices</span>
+          <span class="footer-badge">♾️ Free Updates</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
