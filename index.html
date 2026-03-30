@@ -8,6 +8,20 @@
   <link rel="icon" href="logo.svg" />
   <link rel="apple-touch-icon" href="logo.svg" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- =====================================================
+       GOOGLE ANALYTICS 4
+       Zameni YOUR_MEASUREMENT_ID sa tvojim G-XXXXXXXXXX
+       kodom koji ces dobiti iz Google Analytics dashboarda.
+       GA4 se ucitava SAMO ako korisnik prihvati cookies.
+  ====================================================== -->
+  <script>
+    window.GA_MEASUREMENT_ID = 'YOUR_MEASUREMENT_ID';
+  </script>
+  <!-- Anti-flash: apply saved theme before first paint -->
+  <script>
+    (function(){var t=localStorage.getItem('mt_theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -22,13 +36,30 @@
         <span class="logo-text">MoneyTracker</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#features">Features</a></span></li>
-        <li><a href="#screenshots">Screenshots</a></span></li>
-        <li><a href="#pricing">Pricing</a></span></li>
-        <li><a href="#faq">FAQ</a></span></li>
-        <li><a href="#contact">Contact</a></span></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#pricing" class="nav-cta">Get App - €4.99</a>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="toggle-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+          <svg class="toggle-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <div class="nav-platform-badges">
+          <span class="nav-platform-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.38.21.8.24 1.2.09l11.37-6.57-2.45-2.45zm15.8-10.34c-.34-.56-.9-.9-1.49-.9s-1.14.34-1.49.9L3.6 2.27C3.28 2.1 2.9 2.1 2.58 2.27c-.33.19-.53.54-.53.91v17.64c0 .38.2.72.53.91.17.1.34.14.52.14.18 0 .36-.05.52-.14l12.4-7.15 2.46 2.45 1.71-.99c.66-.38.66-1.35 0-1.72z"/></svg>
+            Android
+          </span>
+          <span class="nav-platform-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            iOS
+          </span>
+        </div>
+        <a href="#pricing" class="nav-cta">Get App - €4.99</a>
+      </div>
       <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -72,6 +103,22 @@
           </a>
           <a href="#features" class="btn btn-ghost btn-lg">
             See All Features ↓
+          </a>
+        </div>
+        <div class="store-badges">
+          <a href="#pricing" class="store-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.38.21.8.24 1.2.09l11.37-6.57-2.45-2.45zm15.8-10.34c-.34-.56-.9-.9-1.49-.9s-1.14.34-1.49.9L3.6 2.27C3.28 2.1 2.9 2.1 2.58 2.27c-.33.19-.53.54-.53.91v17.64c0 .38.2.72.53.91.17.1.34.14.52.14.18 0 .36-.05.52-.14l12.4-7.15 2.46 2.45 1.71-.99c.66-.38.66-1.35 0-1.72z"/></svg>
+            <div class="store-badge-text">
+              <span>Available on</span>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+          <a href="#pricing" class="store-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div class="store-badge-text">
+              <span>Available on</span>
+              <strong>App Store</strong>
+            </div>
           </a>
         </div>
         <div class="hero-stats">
@@ -607,6 +654,22 @@
           <a href="#" class="btn btn-primary btn-xl btn-full">
             Get Money Tracker - €4.99
           </a>
+          <div class="pricing-stores">
+            <a href="#" class="store-badge store-badge--dark">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.38.21.8.24 1.2.09l11.37-6.57-2.45-2.45zm15.8-10.34c-.34-.56-.9-.9-1.49-.9s-1.14.34-1.49.9L3.6 2.27C3.28 2.1 2.9 2.1 2.58 2.27c-.33.19-.53.54-.53.91v17.64c0 .38.2.72.53.91.17.1.34.14.52.14.18 0 .36-.05.52-.14l12.4-7.15 2.46 2.45 1.71-.99c.66-.38.66-1.35 0-1.72z"/></svg>
+              <div class="store-badge-text">
+                <span>Get it on</span>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+            <a href="#" class="store-badge store-badge--dark">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <div class="store-badge-text">
+                <span>Download on the</span>
+                <strong>App Store</strong>
+              </div>
+            </a>
+          </div>
           <p class="pricing-guarantee">🔒 Secure payment &nbsp;·&nbsp; Instant access &nbsp;·&nbsp; Yours forever</p>
         </div>
         <div class="pricing-side">
@@ -929,12 +992,13 @@
           <div class="footer-col">
             <h5>Support</h5>
             <a href="#faq">FAQ</a>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Money Tracker. All rights reserved.</p>
+        <p>© 2026 Money Tracker. All rights reserved. · <button class="cookie-reset-btn" id="cookieReset">Cookie Preferences</button></p>
         <div class="footer-badges">
           <span class="footer-badge">🔒 Secure Payment</span>
           <span class="footer-badge">📱 All Devices</span>
@@ -943,6 +1007,21 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== COOKIE CONSENT BANNER ===== -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+    <div class="cookie-content">
+      <div class="cookie-icon">🍪</div>
+      <div class="cookie-text">
+        <strong>We use cookies</strong>
+        <p>We use analytics cookies to understand how you use our site and improve your experience. You can accept or decline.</p>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
+        <button class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
