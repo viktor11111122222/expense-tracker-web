@@ -74,6 +74,101 @@ if (donutSvg) {
   donutObserver.observe(donutSvg);
 }
 
+// ---- Contact Form ----
+const contactForm = document.getElementById('contactForm');
+const categoryError = document.getElementById('categoryError');
+const formSuccess = document.getElementById('formSuccess');
+
+// Klik na reason karticu - selektuje odgovarajuci chip
+document.querySelectorAll('.contact-reason').forEach(reason => {
+  reason.addEventListener('click', () => {
+    const cat = reason.dataset.category;
+    const radio = contactForm.querySelector(`input[value="${cat}"]`);
+    if (radio) {
+      radio.checked = true;
+      radio.dispatchEvent(new Event('change'));
+    }
+    document.querySelectorAll('.contact-reason').forEach(r => r.classList.remove('active'));
+    reason.classList.add('active');
+  });
+});
+
+// Klik na chip - aktivira reason karticu
+contactForm.querySelectorAll('.chip input[type="radio"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    const cat = radio.value;
+    document.querySelectorAll('.contact-reason').forEach(r => {
+      r.classList.toggle('active', r.dataset.category === cat);
+    });
+    categoryError.classList.remove('visible');
+  });
+});
+
+// Submit
+contactForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const email = document.getElementById('contactEmail');
+  const message = document.getElementById('contactMessage');
+  const category = contactForm.querySelector('input[name="category"]:checked');
+  let valid = true;
+
+  email.classList.remove('error');
+  message.classList.remove('error');
+  categoryError.classList.remove('visible');
+
+  if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    email.classList.add('error'); valid = false;
+  }
+  if (!category) {
+    categoryError.classList.add('visible'); valid = false;
+  }
+  if (!message.value.trim()) {
+    message.classList.add('error'); valid = false;
+  }
+  if (!valid) return;
+
+  // Simulacija slanja (zameni sa pravim API pozivom)
+  const btn = contactForm.querySelector('.contact-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(() => {
+    contactForm.reset();
+    document.querySelectorAll('.contact-reason').forEach(r => r.classList.remove('active'));
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+    formSuccess.classList.add('visible');
+    setTimeout(() => formSuccess.classList.remove('visible'), 5000);
+  }, 1000);
+});
+
+// ---- Lightbox ----
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+
+function openLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.app-screenshot img').forEach(img => {
+  img.addEventListener('click', () => openLightbox(img.src, img.alt));
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxBackdrop.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
 // ---- Pricing CTA: add pulse after 8 seconds ----
 setTimeout(() => {
   document.querySelectorAll('.btn-primary').forEach(btn => {
