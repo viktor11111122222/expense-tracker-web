@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sharing &amp; Collaboration — Money Tracker</title>
+  <meta name="description" content="Split bills, manage family budgets, set spending limits for friends, and share wallets with Money Tracker's collaboration features." />
+  <link rel="icon" href="logo_2.svg" />
+  <link rel="apple-touch-icon" href="logo_2.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>window.GA_MEASUREMENT_ID = 'YOUR_MEASUREMENT_ID';</script>
+  <script>(function(){var t=localStorage.getItem('mt_theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="logo_2.svg" alt="Money Tracker logo" class="logo-img" />
+      <span class="logo-text">MoneyTracker</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="features.html">Features</a></li>
+      <li><a href="features-social.html" class="active">Sharing</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="toggle-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        <svg class="toggle-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="pricing.html" class="nav-cta">Get App - €4.99</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="features.html">Features</a>
+    <a href="features-social.html">Sharing</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <a href="pricing.html" class="mobile-cta">Get App - €4.99</a>
+  </div>
+</nav>
+
+<section class="inner-hero">
+  <div class="container">
+    <div class="inner-hero-content">
+      <span class="section-label">Sharing &amp; Collaboration</span>
+      <h1>Split bills, share wallets, manage money together.</h1>
+      <p>Powerful collaboration tools built for couples, families, housemates, and friend groups — because money is better managed together.</p>
+      <div class="inner-hero-actions">
+        <a href="pricing.html" class="btn btn-primary btn-lg">Get Money Tracker — €4.99</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="features-overview" id="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Collaboration Features</span>
+      <h2>Money management for real life — together.</h2>
+      <p>From splitting a dinner bill to running a family household budget, every shared-finance scenario is covered.</p>
+    </div>
+
+    <!-- Feature 1: Split Expenses -->
+    <div class="feature-block feature-block-reverse" data-animate="fade-up">
+      <div class="feature-content">
+        <span class="feature-label-tag">Split Expenses ⭐ Fan Favorite</span>
+        <h3>Split bills with zero drama</h3>
+        <p>The most powerful bill-splitting feature you'll find anywhere. Divide any expense equally or customize each person's share individually. See the exact breakdown in real time — no more awkward calculations at the dinner table.</p>
+        <ul class="feature-list">
+          <li>Equal split</li>
+          <li>Custom split</li>
+          <li>Mixed mode</li>
+          <li>Real-time calculation</li>
+          <li>Recurring splits</li>
+          <li>Split history</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="app-screenshot">
+          <img src="public/split-expenses.webp" alt="Money Tracker Split Expenses" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2: Family & Shared Budgets -->
+    <div class="feature-block" data-animate="fade-up">
+      <div class="feature-content">
+        <span class="feature-label-tag">Family &amp; Shared Budgets</span>
+        <h3>Manage money together, stay on the same page</h3>
+        <p>Create shared wallets for the whole family or any group. Invite members by email, assign roles, set spending caps and goals — everyone always knows the current state of the shared budget.</p>
+        <ul class="feature-list">
+          <li>Shared wallets</li>
+          <li>Transaction history</li>
+          <li>Email invites</li>
+          <li>Role-based access</li>
+          <li>Friends list</li>
+          <li>Spending limits</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="app-screenshot">
+          <img src="public/familly-buget.webp" alt="Money Tracker Family Budget" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3: Friends & Spending Limits -->
+    <div class="feature-block feature-block-reverse" data-animate="fade-up">
+      <div class="feature-content">
+        <span class="feature-label-tag">Friends &amp; Spending Limits</span>
+        <h3>Know exactly who spends what — and how much.</h3>
+        <p>Build your personal contact list inside the app. Assign a spending limit to each friend or family member and always know whether they're within budget. Perfect for shared households, couples, or group trips.</p>
+        <ul class="feature-list">
+          <li>Friends list</li>
+          <li>Custom limit</li>
+          <li>Status at a glance</li>
+          <li>Email invites</li>
+          <li>Linked contacts</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="app-screenshot">
+          <img src="public/familly-buget.webp" alt="Friends and Spending Limits" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 4: Shared Wallets -->
+    <div class="feature-block" data-animate="fade-up">
+      <div class="feature-content">
+        <span class="feature-label-tag">Shared Wallets</span>
+        <h3>One wallet for every goal in your life.</h3>
+        <p>Create separate wallets for different purposes — household bills, vacation savings, group trips, business expenses. Each wallet has its own budget, spending cap, goal amount, deadline, and transaction history.</p>
+        <ul class="feature-list">
+          <li>Unlimited wallets</li>
+          <li>Goal &amp; deadline</li>
+          <li>Spending cap</li>
+          <li>Category assignment</li>
+          <li>Transaction history</li>
+          <li>Shared access</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="app-screenshot">
+          <img src="public/familly-buget.webp" alt="Shared Wallets" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="more-features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">All Features</span>
+      <h2>Everything you'd expect — and more.</h2>
+      <p>Every detail of Money Tracker is designed to make managing money feel effortless.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-card-icon">📅</div>
+        <h4>Calendar View</h4>
+        <p>Browse expenses day by day on a full calendar. Instantly see which days you spent the most.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">🔁</div>
+        <h4>Recurring Expenses</h4>
+        <p>Rent, subscriptions, bills — set them once and they're added automatically every month.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">📊</div>
+        <h4>Multiple Charts</h4>
+        <p>Pie charts, bar charts, KPI dashboards — visualize your money from every angle.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">👥</div>
+        <h4>Friends List</h4>
+        <p>Add friends and family as contacts. Invite them by email directly from the app.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">🚦</div>
+        <h4>Spending Limits</h4>
+        <p>Set a custom spending limit per friend. See at a glance who's over or under budget.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">👜</div>
+        <h4>Shared Wallets</h4>
+        <p>Create wallets for any goal — household, vacation, trips. Full history and caps per wallet.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">🌙</div>
+        <h4>Dark Mode</h4>
+        <p>Full dark theme for comfortable use day and night. Saved automatically across sessions.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">💱</div>
+        <h4>13+ Currencies</h4>
+        <p>EUR, USD, RSD, GBP, JPY, AUD, CAD, CHF, SEK, NOK, BRL, INR, CNY — all formatted correctly.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">📤</div>
+        <h4>CSV Export/Import</h4>
+        <p>Export all expenses to CSV for Excel or Google Sheets. Import data from other apps instantly.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">📴</div>
+        <h4>Works Offline</h4>
+        <p>Progressive Web App — log expenses even without internet. Everything syncs when you're back online.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">🔒</div>
+        <h4>Secure &amp; Private</h4>
+        <p>JWT auth, bcrypt passwords, rate-limited API. Your data is yours — export or delete anytime.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">🌍</div>
+        <h4>Multi-Language</h4>
+        <p>English, Serbian, Spanish — choose your language during setup or change it anytime in Settings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box" data-animate="fade-up">
+      <div class="cta-glow"></div>
+      <div class="cta-content">
+        <h2>Ready to take control of your money?</h2>
+        <p>Everything you just saw — included for a single one-time payment of €4.99. No subscriptions, no hidden fees.</p>
+        <div class="cta-actions">
+          <a href="pricing.html" class="btn btn-white btn-xl">Get Money Tracker — €4.99</a>
+          <span class="cta-note">⚡ Instant access · All devices · Free updates forever</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">💰</span>
+          <span class="logo-text">MoneyTracker</span>
+        </a>
+        <p>Smart expense tracking for better financial management. Know where your money goes. Keep more of it.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="features.html">Personal Finance</a>
+          <a href="features-social.html">Sharing &amp; Collaboration</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <a href="pricing.html#faq">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Money Tracker. All rights reserved. · <button class="cookie-reset-btn" id="cookieReset">Cookie Preferences</button></p>
+      <div class="footer-badges">
+        <span class="footer-badge">🔒 Secure Payment</span>
+        <span class="footer-badge">📱 All Devices</span>
+        <span class="footer-badge">♾️ Free Updates</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text">
+      <strong>We use cookies</strong>
+      <p>We use analytics cookies to understand how you use our site and improve your experience. You can accept or decline.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox-content">
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

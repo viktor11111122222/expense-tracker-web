@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Money Tracker</title>
+  <meta name="description" content="Contact the Money Tracker team. Report a bug, ask for support, suggest a feature, or send us a message." />
+  <link rel="icon" href="logo_2.svg" />
+  <link rel="apple-touch-icon" href="logo_2.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>window.GA_MEASUREMENT_ID = 'YOUR_MEASUREMENT_ID';</script>
+  <script>(function(){var t=localStorage.getItem('mt_theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="logo_2.svg" alt="Money Tracker logo" class="logo-img" />
+      <span class="logo-text">MoneyTracker</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="features.html">Features</a></li>
+      <li><a href="features-social.html">Sharing</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="toggle-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        <svg class="toggle-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="pricing.html" class="nav-cta">Get App - €4.99</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="features.html">Features</a>
+    <a href="features-social.html">Sharing</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <a href="pricing.html" class="mobile-cta">Get App - €4.99</a>
+  </div>
+</nav>
+
+<section class="inner-hero">
+  <div class="container">
+    <div class="inner-hero-content">
+      <span class="section-label">Contact</span>
+      <h1>We're here to help.</h1>
+      <p>Got a bug, question, or idea? Send us a message and we'll get back to you within 24 hours.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-wrapper" data-animate="fade-up">
+      <div class="contact-info">
+        <div class="contact-reason" data-category="bug">
+          <div class="contact-reason-icon">🐛</div>
+          <div><h4>Report a Bug</h4><p>Something not working as expected? Let us know and we'll fix it fast.</p></div>
+        </div>
+        <div class="contact-reason" data-category="payment">
+          <div class="contact-reason-icon">💳</div>
+          <div><h4>Payment Issue</h4><p>Problem with your purchase? We'll sort it out immediately.</p></div>
+        </div>
+        <div class="contact-reason" data-category="support">
+          <div class="contact-reason-icon">🛠️</div>
+          <div><h4>Technical Support</h4><p>App not loading or behaving strangely? We've got you covered.</p></div>
+        </div>
+        <div class="contact-reason" data-category="feature">
+          <div class="contact-reason-icon">💡</div>
+          <div><h4>Feature Request</h4><p>Have an idea that would make the app better? We'd love to hear it.</p></div>
+        </div>
+        <div class="contact-reason" data-category="other">
+          <div class="contact-reason-icon">✉️</div>
+          <div><h4>General Inquiry</h4><p>Anything else on your mind - just reach out.</p></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="contactEmail">Your email</label>
+          <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <div class="category-chips">
+            <label class="chip"><input type="radio" name="category" value="bug" /><span>🐛 Bug Report</span></label>
+            <label class="chip"><input type="radio" name="category" value="payment" /><span>💳 Payment Issue</span></label>
+            <label class="chip"><input type="radio" name="category" value="support" /><span>🛠️ Technical Support</span></label>
+            <label class="chip"><input type="radio" name="category" value="feature" /><span>💡 Feature Request</span></label>
+            <label class="chip"><input type="radio" name="category" value="other" /><span>✉️ General Inquiry</span></label>
+          </div>
+          <p class="form-error" id="categoryError">Please select a category.</p>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="5" placeholder="Describe your issue or idea in detail..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full contact-submit">Send Message</button>
+        <div class="form-success" id="formSuccess">
+          <span>✓</span> Message sent! We'll get back to you within 24 hours.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">💰</span>
+          <span class="logo-text">MoneyTracker</span>
+        </a>
+        <p>Smart expense tracking for better financial management. Know where your money goes. Keep more of it.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="features.html">Personal Finance</a>
+          <a href="features-social.html">Sharing &amp; Collaboration</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <a href="pricing.html#faq">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Money Tracker. All rights reserved. · <button class="cookie-reset-btn" id="cookieReset">Cookie Preferences</button></p>
+      <div class="footer-badges">
+        <span class="footer-badge">🔒 Secure Payment</span>
+        <span class="footer-badge">📱 All Devices</span>
+        <span class="footer-badge">♾️ Free Updates</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text">
+      <strong>We use cookies</strong>
+      <p>We use analytics cookies to understand how you use our site and improve your experience. You can accept or decline.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

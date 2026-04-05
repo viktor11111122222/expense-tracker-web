@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Finance Features — Money Tracker</title>
+  <meta name="description" content="Explore Money Tracker's personal finance features: dashboard analytics, expense tracking, AI-powered insights, and recurring expenses." />
+  <link rel="icon" href="logo_2.svg" />
+  <link rel="apple-touch-icon" href="logo_2.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>window.GA_MEASUREMENT_ID = 'YOUR_MEASUREMENT_ID';</script>
+  <script>(function(){var t=localStorage.getItem('mt_theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="logo_2.svg" alt="Money Tracker logo" class="logo-img" />
+      <span class="logo-text">MoneyTracker</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="features.html" class="active">Features</a></li>
+      <li><a href="features-social.html">Sharing</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="toggle-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        <svg class="toggle-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="pricing.html" class="nav-cta">Get App - €4.99</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="features.html">Features</a>
+    <a href="features-social.html">Sharing</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <a href="pricing.html" class="mobile-cta">Get App - €4.99</a>
+  </div>
+</nav>
+
+<section class="inner-hero">
+  <div class="container">
+    <div class="inner-hero-content">
+      <span class="section-label">Personal Finance</span>
+      <h1>Track every euro. Understand your money.</h1>
+      <p>Powerful tools for your daily financial life — from a live dashboard to AI-driven insights that help you spend smarter.</p>
+      <div class="inner-hero-actions">
+        <a href="pricing.html" class="btn btn-primary btn-lg">Get Money Tracker — €4.99</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="features-overview" id="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Core Features</span>
+      <h2>Built for your everyday finances.</h2>
+      <p>Every feature is designed to take the stress out of personal money management and put you back in control.</p>
+    </div>
+
+    <!-- Feature 1: Dashboard & Analytics -->
+    <div class="feature-block feature-block-reverse" data-animate="fade-up">
+      <div class="feature-content">
+        <span class="feature-label-tag">Dashboard &amp; Analytics</span>
+        <h3>Your finances at a glance — every single day</h3>
+        <p>Open the app and instantly see your monthly spending, income, and remaining balance. The interactive pie chart breaks down exactly where every euro goes, category by category.</p>
+        <ul class="feature-list">
+          <li>Monthly overview</li>
+          <li>Donut/pie chart</li>
+          <li>Bar charts</li>
+          <li>KPI charts</li>
+          <li>Budget progress bar</li>
+          <li>Quick add</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="app-screenshot">
+          <img src="public/dashboard-1.webp" alt="Money Tracker Dashboard" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2: Expense Tracking -->
+    <div class="feature-block" data-animate="fade-up">
+      <div class="feature-content">
+        <span class="feature-label-tag">Expense Tracking</span>
+        <h3>Log expenses in seconds, not minutes</h3>
+        <p>Add any expense with a description, amount, category, date, and custom tags. Search, filter, and export your entire history whenever you need it — full control over your data.</p>
+        <ul class="feature-list">
+          <li>Categories</li>
+          <li>Custom tags</li>
+          <li>Calendar view</li>
+          <li>Recurring expenses</li>
+          <li>Search &amp; filter</li>
+          <li>CSV export/import</li>
+          <li>13+ currencies</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="app-screenshot">
+          <img src="public/expenses-1.webp" alt="Money Tracker Expenses" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3: AI-Powered Insights -->
+    <div class="feature-block feature-block-reverse" data-animate="fade-up">
+      <div class="feature-content">
+        <span class="feature-label-tag">AI-Powered Insights</span>
+        <h3>Your personal finance advisor, built in</h3>
+        <p>Money Tracker analyzes your spending patterns and surfaces intelligent insights automatically — no setup required. Discover spending trends you never noticed and make smarter decisions.</p>
+        <ul class="feature-list">
+          <li>Smart suggestions</li>
+          <li>Top category alerts</li>
+          <li>Budget recommendations</li>
+          <li>Spending reports</li>
+          <li>KPI summaries</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="app-screenshot">
+          <img src="public/smart-insights.webp" alt="Money Tracker Smart Insights" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 4: Recurring Expenses -->
+    <div class="feature-block" data-animate="fade-up">
+      <div class="feature-content">
+        <span class="feature-label-tag">Recurring Expenses</span>
+        <h3>Set it once. Never forget it again.</h3>
+        <p>Rent, Netflix, gym membership, internet bill — add them once as recurring expenses and Money Tracker automatically logs them every month on the right day. No more forgetting to track your fixed costs.</p>
+        <ul class="feature-list">
+          <li>Monthly recurring</li>
+          <li>Custom day</li>
+          <li>Auto-counted</li>
+          <li>Full control</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="app-screenshot">
+          <img src="public/smart-insights.webp" alt="Recurring Expenses" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="screenshots-section" id="screenshots">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">App Screens</span>
+      <h2>Beautiful. Intuitive. Yours.</h2>
+      <p>Every screen is designed for clarity and speed — so managing money never feels like a chore.</p>
+    </div>
+    <div class="screenshots-grid" data-animate="fade-up">
+      <div class="screenshot-item">
+        <img src="public/dashboard-1.webp" alt="Dashboard Overview" />
+        <span>Dashboard Overview</span>
+      </div>
+      <div class="screenshot-item">
+        <img src="public/expenses-2.webp" alt="Expense Management" />
+        <span>Expense Management</span>
+      </div>
+      <div class="screenshot-item">
+        <img src="public/split-expenses.webp" alt="Bill Splitting" />
+        <span>Bill Splitting</span>
+      </div>
+      <div class="screenshot-item">
+        <img src="public/familly-buget.webp" alt="Family Budgets" />
+        <span>Family Budgets</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box" data-animate="fade-up">
+      <div class="cta-glow"></div>
+      <div class="cta-content">
+        <h2>Ready to take control of your money?</h2>
+        <p>Everything you just saw — included for a single one-time payment of €4.99. No subscriptions, no hidden fees.</p>
+        <div class="cta-actions">
+          <a href="pricing.html" class="btn btn-white btn-xl">Get Money Tracker — €4.99</a>
+          <span class="cta-note">⚡ Instant access · All devices · Free updates forever</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">💰</span>
+          <span class="logo-text">MoneyTracker</span>
+        </a>
+        <p>Smart expense tracking for better financial management. Know where your money goes. Keep more of it.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="features.html">Personal Finance</a>
+          <a href="features-social.html">Sharing &amp; Collaboration</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <a href="pricing.html#faq">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Money Tracker. All rights reserved. · <button class="cookie-reset-btn" id="cookieReset">Cookie Preferences</button></p>
+      <div class="footer-badges">
+        <span class="footer-badge">🔒 Secure Payment</span>
+        <span class="footer-badge">📱 All Devices</span>
+        <span class="footer-badge">♾️ Free Updates</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text">
+      <strong>We use cookies</strong>
+      <p>We use analytics cookies to understand how you use our site and improve your experience. You can accept or decline.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox-content">
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

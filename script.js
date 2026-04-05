@@ -201,24 +201,14 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   });
 });
 
-// ---- Smooth active nav link highlight ----
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${entry.target.id}`) {
-          link.classList.add('active');
-        }
-      });
-    }
+// ---- Active nav link based on current page ----
+(function () {
+  const page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(a => {
+    const href = (a.getAttribute('href') || '').split('#')[0];
+    if (href && href === page) a.classList.add('active');
   });
-}, { threshold: 0.4 });
-
-sections.forEach(s => sectionObserver.observe(s));
+})();
 
 // ---- Donut chart animation on scroll ----
 const donutSvg = document.querySelector('.donut-svg');
@@ -236,6 +226,8 @@ if (donutSvg) {
 const contactForm = document.getElementById('contactForm');
 const categoryError = document.getElementById('categoryError');
 const formSuccess = document.getElementById('formSuccess');
+
+if (contactForm) {
 
 // Klik na reason karticu - selektuje odgovarajuci chip
 document.querySelectorAll('.contact-reason').forEach(reason => {
@@ -299,12 +291,15 @@ contactForm.addEventListener('submit', e => {
   }, 1000);
 });
 
+} // end if (contactForm)
+
 // ---- Lightbox ----
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const lightboxClose = document.getElementById('lightboxClose');
 const lightboxBackdrop = document.getElementById('lightboxBackdrop');
 
+if (lightbox) {
 function openLightbox(src, alt) {
   lightboxImg.src = src;
   lightboxImg.alt = alt;
@@ -326,6 +321,7 @@ lightboxBackdrop.addEventListener('click', closeLightbox);
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLightbox();
 });
+} // end if (lightbox)
 
 // ---- Pricing CTA: add pulse after 8 seconds ----
 setTimeout(() => {
